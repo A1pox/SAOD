@@ -33,4 +33,10 @@ add_compile_options(-Wno-implicit-function-declaration)
         ListProcessing.c
         ListProcessing.h
         MergeProcessing.c
-        MergeProcessing.h)
+        MergeProcessing.h
+            DigitalSort.c
+            DigitalSort.h
+            hesh1.c
+            hesh1.h
+            hesh2.c
+            hesh2.h)
