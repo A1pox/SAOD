@@ -57,7 +57,7 @@ void sumDepth(Node* r, int d, long long& acc){  // для средней глу�
     sumDepth(r->right, d+1, acc);
 }
 
-// удобный вывод
+// вывод
 template<class T>
 void printSeq(const string& title, const T& a){
     cout << title << ": ";
@@ -113,7 +113,7 @@ int main(){
     cout.setf(std::ios::fixed); cout << setprecision(2);
     cout << "Средняя глубина узла: " << avgDepth << "\n";
 
-    // освобождение памяти (итеративно)
+    // освобождение памяти
     vector<Node*> stack = {root};
     while(!stack.empty()){
         Node* cur = stack.back(); stack.pop_back();
