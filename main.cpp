@@ -70,21 +70,9 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    // --- ИНИЦИАЛИЗАЦИЯ СЛУЧАЙНЫХ ЗНАЧЕНИЙ [1..20] ---
-    // Для воспроизводимости можете поменять seed.
     std::mt19937 rng(42);
     std::uniform_int_distribution<int> dist(1,20);
 
-    // --- ПОСТРОЕНИЕ ДЕРЕВА ПО ОБРАЗЦУ (6 узлов) ---
-    // Схема:
-    //            n1
-    //         /      \
-    //       n2        n5
-    //         \         \
-    //         n3         n6
-    //        /
-    //      n4
-    //
     Node* n1 = make(dist(rng));
     Node* n2 = make(dist(rng));
     Node* n3 = make(dist(rng));
@@ -114,14 +102,14 @@ int main(){
     double avgDepth = sz ? (double)sumD / sz : 0.0;
 
     // --- ВЫВОД ---
-    printSeq("Preorder (сверху вниз)", pre);
-    printSeq("Inorder  (слева направо)", in);
-    printSeq("Postorder(снизу вверх)", post);
-    printSeq("Level-order (по уровням)", lvl);
+    printSeq("Сверху вниз", pre);
+    printSeq("Слева направо", in);
+    printSeq("Снизу вверх", post);
+    printSeq("По уровням", lvl);
 
-    cout << "Размер (число узлов): " << sz << "\n";
+    cout << "Размер: " << sz << "\n";
     cout << "Контрольная сумма: " << cs << "\n";
-    cout << "Высота (в уровнях): " << h << "\n";
+    cout << "Высота: " << h << "\n";
     cout.setf(std::ios::fixed); cout << setprecision(2);
     cout << "Средняя глубина узла: " << avgDepth << "\n";
 
