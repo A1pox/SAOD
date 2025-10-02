@@ -1,10 +1,6 @@
-    cmake_minimum_required(VERSION 3.29)
-    project(2 C)
+cmake_minimum_required(VERSION 3.31)
+project(Lab2)
 
-    set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 
-    add_compile_options(-Wno-implicit-function-declaration)
-
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lm")
-
-    add_executable(2 main.cpp)
+add_executable(Lab2 main.cpp)
